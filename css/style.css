@@ -1,0 +1,462 @@
+/*
+ * UNISWA Custom Stylesheet
+ * Brand: UNISWA Agricultural Exports
+ * Colors: White background with green accents
+ */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
+
+/* Color Variables */
+:root {
+    --uniswa-primary: #137C4F;
+    --uniswa-primary-hover: #0E5E3B;
+    --uniswa-primary-rgb: 19, 124, 79;
+    --uniswa-secondary: #E8F5E9;
+    --uniswa-dark: #1D2A22;
+    --uniswa-light: #F4F7F5;
+    --uniswa-muted: #6B7B71;
+    --uniswa-white: #FFFFFF;
+    --uniswa-border: #E0E6E2;
+    
+    --font-heading: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    
+    --shadow-soft: 0 4px 20px rgba(29, 42, 34, 0.04);
+    --shadow-medium: 0 8px 30px rgba(29, 42, 34, 0.08);
+    --shadow-hover: 0 12px 40px rgba(29, 42, 34, 0.12);
+}
+
+/* Core Settings */
+body {
+    font-family: var(--font-body);
+    color: var(--uniswa-dark);
+    background-color: var(--uniswa-white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--uniswa-dark);
+}
+
+/* Sticky Navbar & Mega Menu */
+.navbar-uniswa {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--uniswa-border);
+    transition: all 0.3s ease;
+}
+
+.navbar-uniswa .nav-link {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--uniswa-dark);
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.2s ease;
+}
+
+.navbar-uniswa .nav-link:hover,
+.navbar-uniswa .nav-link.active {
+    color: var(--uniswa-primary);
+}
+
+/* Hover Dropdown / Mega Menu Support on Desktop */
+@media (min-width: 992px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0; /* remove gap so hover is smooth */
+        animation: fadeInSlideUp 0.2s ease forwards;
+    }
+    
+    .mega-menu {
+        width: 650px;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        padding: 1.5rem !important;
+    }
+}
+
+/* Custom Buttons */
+.btn-uniswa-primary {
+    background-color: var(--uniswa-primary);
+    color: var(--uniswa-white);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    border: 1px solid var(--uniswa-primary);
+    padding: 0.625rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.btn-uniswa-primary:hover {
+    background-color: var(--uniswa-primary-hover);
+    border-color: var(--uniswa-primary-hover);
+    color: var(--uniswa-white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(19, 124, 79, 0.2);
+}
+
+.btn-uniswa-secondary {
+    background-color: transparent;
+    color: var(--uniswa-primary);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    border: 1.5px solid var(--uniswa-primary);
+    padding: 0.625rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.btn-uniswa-secondary:hover {
+    background-color: var(--uniswa-secondary);
+    color: var(--uniswa-primary-hover);
+    transform: translateY(-2px);
+}
+
+/* Hero Carousel styling */
+.hero-carousel .carousel-item {
+    height: 70vh;
+    min-height: 480px;
+    background-color: var(--uniswa-dark);
+}
+
+.hero-carousel .carousel-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5));
+}
+
+.hero-carousel img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.hero-carousel .carousel-caption {
+    z-index: 2;
+    top: 58%;
+    bottom: auto;
+    transform: translateY(-50%);
+    left: 5%;
+    right: 5%;
+}
+
+.hero-carousel .carousel-caption-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.hero-carousel h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+    .hero-carousel h1 {
+        font-size: 2rem;
+    }
+    .hero-carousel .carousel-item {
+        height: 60vh;
+    }
+}
+
+/* Section Header */
+.section-title {
+    position: relative;
+    padding-bottom: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--uniswa-primary);
+    border-radius: 2px;
+}
+
+.section-title-left::after {
+    left: 0;
+    transform: none;
+}
+
+/* Cards & Hover Animations */
+.card-uniswa {
+    background: var(--uniswa-white);
+    border: 1px solid var(--uniswa-border);
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    overflow: hidden;
+}
+
+.card-uniswa:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-medium);
+    border-color: rgba(19, 124, 79, 0.3);
+}
+
+.zoom-on-hover {
+    overflow: hidden;
+}
+
+.zoom-on-hover img {
+    transition: transform 0.5s ease;
+}
+
+.zoom-on-hover:hover img {
+    transform: scale(1.06);
+}
+
+/* Export Process Section */
+.process-step {
+    position: relative;
+    padding: 2rem;
+    text-align: center;
+}
+
+.process-step .step-number {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background-color: var(--uniswa-secondary);
+    color: var(--uniswa-primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    display: block;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.process-step:hover .step-number {
+    background-color: var(--uniswa-primary);
+    color: var(--uniswa-white);
+}
+
+/* Connector line for export steps on desktop */
+@media (min-width: 992px) {
+    .process-step::after {
+        content: '';
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        width: 100%;
+        height: 2px;
+        background-color: var(--uniswa-border);
+        z-index: 1;
+    }
+    .col-lg-3:last-child .process-step::after {
+        display: none;
+    }
+}
+
+/* Floating WhatsApp Widget */
+.whatsapp-widget {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 999;
+    background-color: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.whatsapp-widget:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.whatsapp-widget i {
+    font-size: 32px;
+}
+
+/* Page Banner */
+.page-banner {
+    background: linear-gradient(rgba(29, 42, 34, 0.8), rgba(29, 42, 34, 0.7)), url('https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=1200&q=80') no-repeat center center;
+    background-size: cover;
+    padding: 6rem 0 4rem;
+    color: var(--uniswa-white);
+    text-align: center;
+}
+
+.page-banner h1 {
+    font-size: 2.5rem;
+    color: var(--uniswa-white);
+}
+
+.breadcrumb-uniswa {
+    background: transparent;
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+.breadcrumb-uniswa .breadcrumb-item a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+}
+
+.breadcrumb-uniswa .breadcrumb-item a:hover {
+    color: var(--uniswa-white);
+}
+
+.breadcrumb-uniswa .breadcrumb-item.active {
+    color: var(--uniswa-secondary);
+}
+
+/* Light Breadcrumb (for inside pages) */
+.breadcrumb-light-bg {
+    background-color: var(--uniswa-light);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+}
+
+.breadcrumb-light-bg .breadcrumb-item a {
+    color: var(--uniswa-primary);
+    text-decoration: none;
+}
+
+.breadcrumb-light-bg .breadcrumb-item.active {
+    color: var(--uniswa-dark);
+}
+
+/* Product Detail Page Image Gallery */
+.gallery-main {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--uniswa-border);
+    background-color: var(--uniswa-white);
+    height: 380px;
+}
+
+.gallery-main img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+
+.gallery-thumb {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid transparent;
+    cursor: pointer;
+    background-color: var(--uniswa-white);
+    transition: all 0.2s ease;
+}
+
+.gallery-thumb img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-thumb.active {
+    border-color: var(--uniswa-primary);
+}
+
+/* Technical Specification Table */
+.table-uniswa {
+    border: 1px solid var(--uniswa-border);
+}
+
+.table-uniswa th {
+    background-color: var(--uniswa-light);
+    color: var(--uniswa-dark);
+    font-family: var(--font-heading);
+    font-weight: 600;
+}
+
+.table-uniswa td {
+    color: var(--uniswa-dark);
+    font-size: 0.95rem;
+}
+
+/* Trust Section Badges */
+.trust-badge {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.trust-badge .badge-icon {
+    font-size: 2.5rem;
+    color: var(--uniswa-primary);
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+/* Scroll Animations CSS */
+.animate-on-scroll {
+    opacity: 0;
+    transition: all 0.8s ease-out;
+}
+
+.fade-in-up {
+    transform: translateY(30px);
+}
+
+.zoom-in {
+    transform: scale(0.95);
+}
+
+.slide-in-left {
+    transform: translateX(-40px);
+}
+
+.animate-on-scroll.animated {
+    opacity: 1;
+    transform: translate(0) scale(1);
+}
+
+/* Keyframes */
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Custom Category Badge */
+.badge-uniswa-category {
+    background-color: rgba(25, 135, 84, 0.08);
+    color: #13653f;
+    border: 1px solid rgba(25, 135, 84, 0.18);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.72rem;
+    letter-spacing: 0.3px;
+    padding: 0.35em 0.75em;
+    border-radius: 4px;
+    display: inline-block;
+}
