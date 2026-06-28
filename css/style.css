@@ -64,6 +64,13 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--uniswa-primary);
 }
 
+@media (max-width: 991.98px) {
+    .navbar-uniswa .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
 /* Hover Dropdown / Mega Menu Support on Desktop */
 @media (min-width: 992px) {
     .dropdown:hover .dropdown-menu {
