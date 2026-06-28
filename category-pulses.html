@@ -40,14 +40,7 @@
                 <span class="fw-extrabold fs-4 tracking-tight text-dark" style="font-family: var(--font-heading); font-weight: 800;">UNISWA</span>
             </a>
             
-            <div class="d-flex align-items-center d-lg-none ms-auto me-3">
-                <a class="text-dark me-3" href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin fs-5"></i></a>
-                <a class="text-dark me-3" href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="bi bi-instagram fs-5"></i></a>
-                <a class="text-dark me-3" href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="bi bi-facebook fs-5"></i></a>
-                <a class="btn btn-uniswa-primary btn-sm px-3" href="contact.html">Inquire</a>
-            </div>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             
@@ -83,7 +76,15 @@
 
                 </ul>
                 
-                <!-- Social media + Action call -->
+                <!-- Social media + Action call (visible inside collapse on mobile/tablet) -->
+                <div class="d-flex d-lg-none align-items-center mt-3 pt-3 border-top">
+                    <a class="text-dark me-3" href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin fs-5"></i></a>
+                    <a class="text-dark me-3" href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="bi bi-instagram fs-5"></i></a>
+                    <a class="text-dark me-3" href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="bi bi-facebook fs-5"></i></a>
+                    <a class="btn btn-uniswa-primary btn-sm px-3 ms-auto" href="contact.html">Inquire</a>
+                </div>
+
+                <!-- Social media + Action call (desktop only) -->
                 <div class="d-none d-lg-flex align-items-center">
                     <a class="text-dark me-3 hover-primary" href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin fs-5"></i></a>
                     <a class="text-dark me-3 hover-primary" href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="bi bi-instagram fs-5"></i></a>

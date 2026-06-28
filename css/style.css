@@ -163,10 +163,30 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
     .hero-carousel h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     .hero-carousel .carousel-item {
         height: 60vh;
+        min-height: 380px;
+    }
+    .hero-carousel .carousel-caption-content {
+        padding: 0 15px;
+    }
+    .hero-carousel .carousel-caption {
+        top: 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-carousel h1 {
+        font-size: 1.4rem;
+    }
+    .hero-carousel p.lead {
+        font-size: 0.9rem;
+    }
+    .hero-carousel .btn {
+        padding: 0.5rem 1.2rem;
+        font-size: 0.9rem;
     }
 }
 
