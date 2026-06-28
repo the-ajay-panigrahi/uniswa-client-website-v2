@@ -28,12 +28,16 @@
 }
 
 /* Core Settings */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 body {
     font-family: var(--font-body);
     color: var(--uniswa-dark);
     background-color: var(--uniswa-white);
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
